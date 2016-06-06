@@ -1,0 +1,44 @@
+$ git config --global user.name "EvilDome1"
+$ git config --global user.email "evil756377706@gmail.com"
+
+
+$ mkdir learngit	//创建目录
+$ cd learngit		//cd打开
+$ pwd				//显示路径
+/Users/michael/learngit
+$ git init			//把这个目录变成Git可以管理的仓库
+Initialized empty Git repository in /Users/michael/learngit/.git
+$ ls -ah			//查看
+
+$ car xxx.txt		//在命令行显示文件
+
+$ git add xxx.txt	//添加到仓库
+$ git commit -m "wrote a xxx file"	//把文件提交到仓库
+[master (root-commit) cb926e7] wrote a readme file
+ 1 file changed, 2 insertions(+)
+ create mode 100644 readme.txt
+ /*$ git add file1.txt
+$ git add file2.txt file3.txt
+$ git commit -m "add 3 files."
+*/
+
+$ git status		//查看是否被修改
+$ git diff			//查看被修改的内容
+$ git log			//查看提交日志  --pretty=oneline参数 
+
+//添加快照
+$ git add readme.txt	
+$ git commit -m "append GPL"
+[master 3628164] append GPL
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+//版本回退
+$ git reset --hard HEAD^	//^等于回退次数
+HEAD is now at ea34578 add distributed
+//还原快照
+$ git reset --hard 1111111
+HEAD is now at 1111111 append GPL
+
+$ git reflog 	//显示之前输入的命令
+//撤销修改
+$ git checkout -- xxx.txt //撤回到最近一次git commit或git add时的状态
+$ git reset		//回退版本，也可以把暂存区退回到工作区
