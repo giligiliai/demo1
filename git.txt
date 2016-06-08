@@ -40,5 +40,6 @@ HEAD is now at 1111111 append GPL
 
 $ git reflog 	//显示之前输入的命令
 //撤销修改
-$ git checkout -- xxx.txt //撤回到最近一次git commit或git add时的状态
-$ git reset		//回退版本，也可以把暂存区退回到工作区
+$ git checkout -- xxx.txt //撤回到最近一次git commit或git add时的状态 不用--也行
+$ git reset		//回退版本，也可以把暂存区退回到工作 用来撤回git add不会回到先前版本
+$ git reset HEAD <file>
